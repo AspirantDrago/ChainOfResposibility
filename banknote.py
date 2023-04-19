@@ -1,5 +1,6 @@
 from uuid import uuid4
-from .valute import Valute
+
+from valute import Valute
 
 
 class Banknote:
