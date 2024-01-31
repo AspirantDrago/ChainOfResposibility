@@ -1,0 +1,77 @@
+digraph "classes_bankomat" {
+rankdir=BT
+edge[arrowtail=empty]
+charset="utf-8"
+"Bankomat" [
+    color="black",
+    fontcolor="black",
+    label=<{Bankomat|_bill_acceptor : list<br/>_chain_storages : StorageValute \| None<br ALIGN="LEFT"/>|__init__()<br ALIGN="LEFT"/>append(banknote: Banknote): None<br ALIGN="LEFT"/>take_valute(value: int, name: Valute): tuple[bool, Banknotes]<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+"BankomatSber" [
+    color="black",
+    fontcolor="black",
+    label=<{BankomatSber|_chain_storages<br ALIGN="LEFT"/>|__init__()<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+"Banknote" [
+    color="black",
+    fontcolor="black",
+    label=<{Banknote|_name<br ALIGN="LEFT"/>_nominal : int<br ALIGN="LEFT"/>_number : int<br ALIGN="LEFT"/>|__hash__(): int<br ALIGN="LEFT"/>__init__(nominal: int, name: Valute)<br ALIGN="LEFT"/>__int__(): int<br ALIGN="LEFT"/>__repr__(): str<br ALIGN="LEFT"/>__str__(): str<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+"Command" [
+    color="black",
+    fontcolor="black",
+    label=<{Command|<br ALIGN="LEFT"/>|}>,
+    shape="record",
+    style="solid"];
+"CommandTakeOff" [
+    color="black",
+    fontcolor="black",
+    label=<{CommandTakeOff|_bankomat : str<br ALIGN="LEFT"/>_name<br ALIGN="LEFT"/>_original_value : int<br ALIGN="LEFT"/>_value : int<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>value<br ALIGN="LEFT"/>|__bool__(): bool<br ALIGN="LEFT"/>__init__(value: int, name: Valute, bankomat: 'Bankomat')<br ALIGN="LEFT"/>append(banknote: Banknote): None<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+"CommandTakeOn" [
+    color="black",
+    fontcolor="black",
+    label=<{CommandTakeOn|_bankomat : str<br ALIGN="LEFT"/>|__init__(bankomat: 'Bankomat')<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+"Valute" [
+    color="black",
+    fontcolor="black",
+    label=<{Valute|name<br ALIGN="LEFT"/>|}>,
+    shape="record",
+    style="solid"];
+"Handler" [
+    color="black",
+    fontcolor="black",
+    label=<{Handler|_next_handler : 'Handler' \| None, str<br ALIGN="LEFT"/>|__init__()<br ALIGN="LEFT"/>add_handler(handler: 'Handler'): 'Handler'<br ALIGN="LEFT"/><I>handle</I>(command: Command): None<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+"MissingBillError" [
+    color="black",
+    fontcolor="red",
+    label=<{MissingBillError|<br ALIGN="LEFT"/>|}>,
+    shape="record",
+    style="solid"];
+"StorageValute" [
+    color="black",
+    fontcolor="black",
+    label=<{StorageValute|_name<br ALIGN="LEFT"/>_nominal : int<br ALIGN="LEFT"/>_storage<br ALIGN="LEFT"/>count<br ALIGN="LEFT"/>nominal<br ALIGN="LEFT"/>|__init__(nominal: int, name: Valute, count: int)<br ALIGN="LEFT"/>__len__(): int<br ALIGN="LEFT"/>handle(command: Command): None<br ALIGN="LEFT"/>replenishment(value: int): None<br ALIGN="LEFT"/>}>,
+    shape="record",
+    style="solid"];
+
+"BankomatSber" -> "Bankomat" [arrowhead="empty",];
+"CommandTakeOff" -> "Command" [arrowhead="empty", arrowtail="none"];
+"CommandTakeOn" -> "Command" [arrowhead="empty", arrowtail="none"];
+"StorageValute" -> "Handler" [arrowhead="empty", arrowtail="none", style=dashed, label=implementation];
+"Handler" -> "Handler" [arrowhead="empty", arrowtail="none"];
+"Valute" -> "StorageValute" [arrowhead="diamond"]
+"Banknote" -> "StorageValute" [constraint=false, arrowhead=odiamond]
+"StorageValute" -> "Bankomat" [constraint=true, arrowhead=diamond]
+"Bankomat" -> "CommandTakeOff" [constraint=true, arrowhead=odiamond]
+"Valute" -> "CommandTakeOff" [constraint=true, arrowhead=diamond]
+"Bankomat" -> "CommandTakeOn" [constraint=true, arrowhead=odiamond]
+}
