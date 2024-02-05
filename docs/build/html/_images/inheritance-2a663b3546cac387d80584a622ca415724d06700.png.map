@@ -1,0 +1,6 @@
+<map id="inheritance1244cdbf0e" name="inheritance1244cdbf0e">
+<area shape="rect" id="node1" title="Helper class that provides a standard way to create an ABC using" alt="" coords="5,31,81,56"/>
+<area shape="rect" id="node2" href="#command.Command" target="_top" title="Абстрактный базовый класс для команд банкомата." alt="" coords="129,31,286,56"/>
+<area shape="rect" id="node3" href="#command.CommandTakeOff" target="_top" title="Команда снятия денег с банкомата." alt="" coords="334,5,539,31"/>
+<area shape="rect" id="node4" href="#command.CommandTakeOn" target="_top" title="Команда добавления денег в банкомат." alt="" coords="334,55,539,80"/>
+</map>

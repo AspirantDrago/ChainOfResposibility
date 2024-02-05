@@ -1,0 +1,372 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="">
+    <link rel="icon" type="image/x-icon" href="">
+
+  
+  <title>storage_valute &mdash; документация ChainOfResposibility 1.0.0</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+
+
+  <link rel="stylesheet" href="../_static/css/img.css" type="text/css"/>
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+
+  <link rel="stylesheet" href="../_static/css/darker.css" type="text/css" media="(prefers-color-scheme: dark)"/>
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="документация ChainOfResposibility 1.0.0" href="../index.html"/>
+        <link rel="up" title="Код модуля" href="index.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+	
+        <a href="../index.html" class="fa fa-home"> ChainOfResposibility </a>
+	
+	
+        <div role="search">
+	  
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	  
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <p class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../banknote.html">Banknote</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../banknote.html#banknote.Banknote"><code class="docutils literal notranslate"><span class="pre">Banknote</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bankomat.html">Bankomat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bankomat.html#bankomat.Bankomat"><code class="docutils literal notranslate"><span class="pre">Bankomat</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bankomat.html#bankomat.BankomatSber"><code class="docutils literal notranslate"><span class="pre">BankomatSber</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../valute.html">Valute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../valute.html#valute.Valute"><code class="docutils literal notranslate"><span class="pre">Valute</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../command.html">Command</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#command.Command"><code class="docutils literal notranslate"><span class="pre">Command</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#command.CommandTakeOff"><code class="docutils literal notranslate"><span class="pre">CommandTakeOff</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command.html#command.CommandTakeOn"><code class="docutils literal notranslate"><span class="pre">CommandTakeOn</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../storage_valute.html">Storage valute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../storage_valute.html#storage_valute.Handler"><code class="docutils literal notranslate"><span class="pre">Handler</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storage_valute.html#storage_valute.MissingBillError"><code class="docutils literal notranslate"><span class="pre">MissingBillError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storage_valute.html#storage_valute.StorageValute"><code class="docutils literal notranslate"><span class="pre">StorageValute</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">ChainOfResposibility </a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+      	<div id="dark-mode-toggle-container">
+	  <dark-mode-toggle appearance="toggle" dark="switch to light mode" light="switch to dark mode">
+	  </dark-mode-toggle>
+	</div>
+  <h1>Исходный код storage_valute</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="kn">from</span> <span class="nn">overrides</span> <span class="kn">import</span> <span class="n">overrides</span>
+
+<span class="kn">from</span> <span class="nn">banknote</span> <span class="kn">import</span> <span class="n">Banknote</span><span class="p">,</span> <span class="n">Valute</span>
+<span class="kn">from</span> <span class="nn">command</span> <span class="kn">import</span> <span class="n">Command</span><span class="p">,</span> <span class="n">CommandTakeOff</span>
+
+
+<div class="viewcode-block" id="MissingBillError">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.MissingBillError">[документация]</a>
+<span class="k">class</span> <span class="nc">MissingBillError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Исключение, возникающее при отсутствии купюр в хранилище.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="Handler">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.Handler">[документация]</a>
+<span class="k">class</span> <span class="nc">Handler</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Абстрактный класс обработчика команды.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Handler.__init__">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.Handler.__init__">[документация]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Конструктор по-умолчанию для обработчика команды.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span><span class="p">:</span> <span class="s1">&#39;Handler&#39;</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="Handler.add_handler">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.Handler.add_handler">[документация]</a>
+    <span class="k">def</span> <span class="nf">add_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handler</span><span class="p">:</span> <span class="s1">&#39;Handler&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Handler&#39;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Добавление следующего обработчика команды.</span>
+
+<span class="sd">        :param handler: Следующий обработчик команды.</span>
+<span class="sd">        :type handler: Handler</span>
+<span class="sd">        :return: Следующий обработчик команды.</span>
+<span class="sd">        :rtype: Handler</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span> <span class="o">=</span> <span class="n">handler</span>
+        <span class="k">return</span> <span class="n">handler</span></div>
+
+
+<div class="viewcode-block" id="Handler.handle">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.Handler.handle">[документация]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">:</span> <span class="n">Command</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Абстрактный метод обработки команды.</span>
+
+<span class="sd">        :param command: Команда.</span>
+<span class="sd">        :type command: Command</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="StorageValute">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.StorageValute">[документация]</a>
+<span class="k">class</span> <span class="nc">StorageValute</span><span class="p">(</span><span class="n">Handler</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Класс хранилища валюты.</span>
+
+<span class="sd">    Дочерний класс от Handler</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="StorageValute.__init__">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.StorageValute.__init__">[документация]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nominal</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Valute</span><span class="p">,</span> <span class="n">count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Конструктор класса хранилища валюты</span>
+
+<span class="sd">        :param nominal: Номинал купюр</span>
+<span class="sd">        :type nominal: int</span>
+<span class="sd">        :param name:    Тип валюты</span>
+<span class="sd">        :type name:     Valute</span>
+<span class="sd">        :param count:   Количество купюр</span>
+<span class="sd">        :type count:    int</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span> <span class="o">=</span> <span class="n">nominal</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_storage</span> <span class="o">=</span> <span class="p">[</span><span class="n">Banknote</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">)]</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nominal</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Номинал купюр</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Количество купюр</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="StorageValute.__len__">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.StorageValute.__len__">[документация]</a>
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Количество купюр в хранилище.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_storage</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="StorageValute.handle">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.StorageValute.handle">[документация]</a>
+    <span class="nd">@overrides</span>
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">:</span> <span class="n">Command</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Обработка команды.</span>
+
+<span class="sd">        :param command: Команда.</span>
+<span class="sd">        :type command: Command</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">CommandTakeOff</span><span class="p">):</span>
+            <span class="n">command</span><span class="p">:</span> <span class="n">CommandTakeOff</span> <span class="o">=</span> <span class="n">command</span>
+            <span class="k">if</span> <span class="n">command</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">value</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Сняли </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> купюр номиналом </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+                        <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_storage</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="n">command</span><span class="p">)</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">command</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_next_handler</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="n">command</span><span class="p">)</span></div>
+
+        <span class="c1"># if value &gt; len(self):</span>
+        <span class="c1">#     raise MissingBillError(f&#39;Недостаточно купюр номиналом {self._nominal} рублей. &#39; +</span>
+        <span class="c1">#                            f&#39;Требуется {value}, в наличии {self._count} купюр&#39;)</span>
+        <span class="c1"># for _ in range(value):</span>
+        <span class="c1">#     target.append(self._storage.pop())</span>
+        <span class="c1">#</span>
+
+<div class="viewcode-block" id="StorageValute.replenishment">
+<a class="viewcode-back" href="../storage_valute.html#storage_valute.StorageValute.replenishment">[документация]</a>
+    <span class="k">def</span> <span class="nf">replenishment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Пополнение хранилища купюрами.</span>
+
+<span class="sd">        :param value: Количество купюр.</span>
+<span class="sd">        :type value: int</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Добавили </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> купюр номиналом </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_storage</span> <span class="o">+=</span> <span class="p">[</span><span class="n">Banknote</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_nominal</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">value</span><span class="p">)]</span></div>
+</div>
+
+</pre></div>
+
+	    </div>
+            <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024, AspirantDrago.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="https://poraodojuca.dev">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/sphinx_highlight.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/translations.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>
